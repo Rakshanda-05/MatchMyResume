@@ -1,0 +1,31 @@
+# ─── Web Framework ────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12       # Required for Form() data in FastAPI
+
+# ─── Anthropic / Claude ───────────────────────────────────────────────────────
+anthropic==0.40.0
+
+# ─── Twilio WhatsApp ──────────────────────────────────────────────────────────
+twilio==9.4.0
+
+# ─── Resume Parsing ───────────────────────────────────────────────────────────
+pdfplumber==0.11.4             # Primary PDF text extraction
+PyPDF2==3.0.1                  # Fallback PDF parser
+python-docx==1.1.2             # DOCX reading and writing
+
+# ─── PDF Generation ───────────────────────────────────────────────────────────
+reportlab==4.2.5               # PDF generation fallback
+docx2pdf==0.1.8                # DOCX to PDF conversion (requires LibreOffice on Linux)
+
+# ─── HTTP Client (async) ──────────────────────────────────────────────────────
+httpx==0.28.1                  # Used for downloading Twilio media attachments
+
+# ─── Configuration ────────────────────────────────────────────────────────────
+pydantic-settings==2.6.1       # Environment variable management
+python-dotenv==1.0.1           # .env file loading
+
+# ─── Optional: Production Extras ──────────────────────────────────────────────
+# redis==5.2.1                 # Uncomment for Redis-based session storage
+# gunicorn==23.0.0             # Uncomment for production WSGI server
+# APScheduler==3.10.4          # Uncomment for periodic session cleanup tasks
